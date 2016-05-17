@@ -58,6 +58,7 @@ LOCAL_SRC_FILES += ijkavformat/ijklongurl.c
 LOCAL_SRC_FILES += ijkavformat/ijkmediadatasource.c
 LOCAL_SRC_FILES += ijkavformat/ijksegment.c
 LOCAL_SRC_FILES += ijkavformat/ijkurlhook.c
+LOCAL_SRC_FILES += ijkavformat/qzvideoformat.c
 LOCAL_SRC_FILES += ijkavformat/utils.c
 
 LOCAL_SHARED_LIBRARIES := ijkffmpeg ijksdl

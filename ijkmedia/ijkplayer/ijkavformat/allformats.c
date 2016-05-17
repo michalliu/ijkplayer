@@ -115,5 +115,6 @@ void ijkav_register_all(void)
 
     /* demuxers */
     IJK_REGISTER_DEMUXER(ijklivehook);
+    IJK_REGISTER_DEMUXER(qzvideoformat);
     av_log(NULL, AV_LOG_INFO, "===== custom modules end =====\n");
 }
