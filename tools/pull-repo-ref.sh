@@ -12,6 +12,7 @@ elif [ ! -d $LOCAL_WORKSPACE ]; then
     git repack -a
 else
     cd $LOCAL_WORKSPACE
+    rm -f .git/objects/info/alternates
     git fetch --all --tags
     cd -
 fi
