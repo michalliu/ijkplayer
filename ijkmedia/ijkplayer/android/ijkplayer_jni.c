@@ -247,6 +247,21 @@ LABEL_RETURN:
     ijkmp_dec_ref_p(&mp);
 }
 
+static jdouble
+IjkMediaPlayer_getFPCalculation(JNIEnv *env, jobject thiz, jint loop_count)
+{
+    MPTRACE("%s\n", __func__);
+
+    // get the number of the pi
+    int loop_count_native = (int)loop_count;
+    int loop = 0;
+    double pi = 0;
+    for (; loop < loop_count_native; loop++)
+        pi += pow(-1, loop) * 1.0/(2 * loop + 1);
+    pi *= 4;
+    return (jdouble) pi;
+}
+
 static void
 IjkMediaPlayer_pause(JNIEnv *env, jobject thiz)
 {
@@ -964,6 +979,7 @@ IjkMediaPlayer_native_setLogLevel(JNIEnv *env, jclass clazz, jint level)
 // ----------------------------------------------------------------------------
 
 static JNINativeMethod g_methods[] = {
+    { "_getFPCalculation",      "(I)D",    (void *) IjkMediaPlayer_getFPCalculation },
     {
         "_setDataSource",
         "(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V",
