@@ -40,4 +40,6 @@ xcshareddata
 *.xccheckout
 
 cscope.*
+
+.svn/
 tags
