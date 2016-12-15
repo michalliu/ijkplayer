@@ -43,3 +43,5 @@ cscope.*
 
 .svn/
 tags
+
+*~
