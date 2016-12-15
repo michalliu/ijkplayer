@@ -190,6 +190,7 @@ mkdir -p $FF_SYSROOT
 FF_TOOLCHAIN_TOUCH="$FF_TOOLCHAIN_PATH/touch"
 if [ ! -f "$FF_TOOLCHAIN_TOUCH" ]; then
     $ANDROID_NDK/build/tools/make-standalone-toolchain.sh \
+		--force \
         $FF_MAKE_TOOLCHAIN_FLAGS \
         --platform=$FF_ANDROID_PLATFORM \
         --toolchain=$FF_TOOLCHAIN_NAME
